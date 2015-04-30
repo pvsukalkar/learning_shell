@@ -1,0 +1,14 @@
+1) FAILED TO PUSH ... : 
+http://stackoverflow.com/questions/10753268/github-error-failed-to-push-some-refs-to-gitgithub-commyrepo-git
+2) switch in shell : 
+http://www.dreamsyssoft.com/unix-shell-scripting/case-tutorial.php
+3) Delete line with echo : 
+http://unix.stackexchange.com/questions/26576/how-to-delete-line-with-echo
+4) color codes: 
+http://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+5) beep sound: 
+http://unix.stackexchange.com/questions/1974/how-do-i-make-my-pc-speaker-beep
+6) stopwatch reference: 
+http://www.thelinuxdaily.com/2012/03/simple-stopwatch-script/
+7) Online bash execution: 
+http://www.tutorialspoint.com/execute_bash_online.php
