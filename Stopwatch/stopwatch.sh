@@ -1,5 +1,6 @@
 #!/bin/sh
- 
+#These escape codes 'LIGHT_GREEN', 'LIGHT_BLUE', 'RED' can be used to give corresponding color to 
+#printed text
 LIGHT_GREEN='\033[1;32m'
 LIGHT_BLUE='\033[1;34m'
 RED='\033[0;31m'
@@ -36,6 +37,7 @@ case ${option} in
  	   DAYS=$(($DIFF / 86400))
  	printf "\r%3d ${LIGHT_GREEN}Days${NC},${LIGHT_BLUE}%02d:%02d:%02d${NC}" $DAYS $HOURS $MINS $SECS
    	#sleep 0.25
+#read -t <time> : this would wait <time> seconds for user's input 
 	   read -t 0.25 stopper
 	   if [[ $stopper == "L"  ]]; then
 	   	BEGIN=$(date +%s)
@@ -60,6 +62,7 @@ case ${option} in
         done
 	COUNT=10
 	while [[ $COUNT -gt 0 ]]; do
+#echo -e "\a" produces beep sound
 	   echo -e "\a"
 	   sleep 0.5
 	   COUNT=$((COUNT-1))
