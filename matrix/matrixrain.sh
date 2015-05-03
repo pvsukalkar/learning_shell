@@ -28,7 +28,7 @@ while true ; do
     #fi
     index=$[i%$length]
     c=${name:index:1} 
-    echo -e "\033[$[i-1];${j}f\033[32m$c\033[$i;${j}f\033[37m"$c   #${j}H prints character horizontally on j th column 
+    echo -e "\033[$[i-1];${j}f\033[32m$c\033[$i;${j}f\033[37m"   #${j}H prints character horizontally on j th column 
     sleep 0.1
     if [ $i -ge $d ] ; then
     	echo -e "\033[$[i-d];${j}H "    
