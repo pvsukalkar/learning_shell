@@ -14,13 +14,7 @@ echo "Give text which you would like to type at this speed.."
 read text 
 words=($text)
 word_count=${#words[@]}
-character_count=0
-for word in $text ; do 
-	temp=($word)
-	temp_count=`echo "$word" | wc -c`
-	character_count=$((character_count + temp_count -1))
-	((character_count++))
-done 
+character_count=`echo "$text" | wc -c`
 ((character_count--))
 MINUTE=60
 SLEEP_TIME=`echo "$MINUTE * $word_count / $speed / $character_count " | bc -l`
