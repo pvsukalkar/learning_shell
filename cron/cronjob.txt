@@ -1,0 +1,29 @@
+Cron jobs: 
+
+Step 1: Make the script to be run 
+Ex. script: /root/learning_shell/good_morning.sh
+#!/bin/sh
+echo "Good morning, Pavan!!"
+
+Step 2: Open crontab for editing 
+Command: crontab -e 
+
+Step 3: Add your cron job 
+Command : 0 9 * * * /root/learning_shell/good_morning.sh 
+This command means : 
+0 --> 0th minute of day 
+9 --> 9th hour of day 
+* --> all days of month (this can be replaced by any day of the month , 1-31) 
+* --> all months of year ( this can be replaced by any month of year, 1-12) 
+* --> all days of week (this can be replaced by any day of week, 1 for Monday, 2 for Tuesday, ...) 
+/root/learning_shell/good_morning.sh --> replace this by any command as you would have typed it on command line 
+
+Step 4: Save your cron job 
+*Step 5: Any cron job can be removed by opening crontab in vi using 'crontab -e' and then removing your job 
+
+(Once your job is done and when you open your machine, you will get a message saying : You have a new mail in /var/spool/mail/root)
+
+Usage: 
+1) Use this for running full build which needs to be done everyday. 
+2) Or write a script that contains commands to do checkout of current code and then add that script to cron job thus getting fresh checkout everytime 
+3) ...
