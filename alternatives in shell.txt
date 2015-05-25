@@ -1,0 +1,36 @@
+TO DO and NOT TO DOs in shell: 
+1) Keep big files in mind: 
+	`sed -n '1p' file` --> prints the first line of file but reads the whole file, so if file is huge there would be performance issue 
+	`sed -n '1p;1q' file` --> reads first line and quits file. Thus no performance issue even for huge files. 
+	
+	So choose your commands wisely.
+	
+2) Try different ways: 
+ a) if [ $? -eq 0 ] then    echo "Success" fi
+   can be replaced by 
+   [ $? -eq 0 ] && echo "Success" 
+   
+ b) Files transferred from windows to linux have ^M (Ctrl+M) character at end of each line. To remove this use any of following commands : 
+   i) dos2unix file 
+   ii) tr -d '^M' <file > file2
+		mv file2 file1 
+   iii) sed -i 's/^M//g' file
+   iv) using vi editor 
+   :%s/^M//
+   v) awk 'sub(/^M/,"");1' file
+   vi) perl -pi -e 's/^M//g' file 
+   
+  c) Evaluating arithmetic expression: 
+   i) use expr: 
+    --> x=3 ; y=4 ; expr $x + $y 
+   ii) use bc : 
+    --> echo $x + $y | bc 
+   iii) ((...)) notation 
+    --> echo $(($x + $y))
+   iv ) let : 
+    --> let z=x+y      // Note that $ is not used with variable names  
+        echo $z 		
+   v) awk : 
+   --> echo "" | awk '{print '$x' + '$y'}'
+   
+  d) 
