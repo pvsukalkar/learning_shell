@@ -1,0 +1,9 @@
+Pass any file name as parameter to this script. 
+It will create and open the file with 'file name' in vi editor.
+If it is shell file it will add '#!/bin/sh'
+for C file : '#include <stdio.h>' and so on..
+Then once you made changes to this file, it will automatically change it to executable and run it.
+After seeing the output, you might notice some errors so this script will automatically open your 
+file for editing in vi editor. 
+
+Thus, in short it accelerates process of opening file, creating template , running it and again opening to fix errors. 
